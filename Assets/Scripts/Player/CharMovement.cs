@@ -13,6 +13,7 @@ public class CharMovement : MonoBehaviour {
 	void Start () {
 		dist = transform.position.y; // Distance camera is above map
 	}
+
 	void Update () {
 		if (Input.GetMouseButtonDown (0)) {
 			RaycastHit hit;
