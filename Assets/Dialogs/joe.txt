@@ -1,0 +1,5 @@
+This is the first character dialog.
+It can contain Multiple lines.
+--LINE--
+You can assign new dialog promts by using -- LINE -- without the spaces.
+That is how you talk 
