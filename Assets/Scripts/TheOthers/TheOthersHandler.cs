@@ -4,7 +4,8 @@ using System.Collections;
 public class TheOthersHandler : MonoBehaviour {
 
 	private Behaviour halo;
-	private float turnOffHaloTime = 0f;
+	private bool isNearPlayer = false;
+	private float notNearPlayerTime = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -12,14 +13,22 @@ public class TheOthersHandler : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Debug.Log("clicked on me!");
+		if (isNearPlayer) {
+			Debug.Log("clicked while near player");
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (turnOffHaloTime != 0f && Time.time > turnOffHaloTime) {
-			halo.enabled = false;
-			turnOffHaloTime = 0f;
+		if (notNearPlayerTime != 0f) {
+			if(Time.time > notNearPlayerTime){
+				halo.enabled = false;
+				notNearPlayerTime = 0f;
+				isNearPlayer = false;
+			} else {
+				halo.enabled = true;
+			}
 		}
 	}
 	
@@ -29,8 +38,8 @@ public class TheOthersHandler : MonoBehaviour {
 
 	// received as message from other objects
 	void PlayerMessage(){
-		halo.enabled = true;
-		turnOffHaloTime = Time.time + 0.5f; // add two seconds delay for when to turn off halo
+		isNearPlayer = true;
+		notNearPlayerTime = Time.time + 0.5f; // add two seconds delay for when to turn off halo
 	}
 
 }
