@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TheOthersHandler : MonoBehaviour {
 
+	private GameObject player;
+
 	private Behaviour halo;
 	private bool isNearPlayer = false;
 	private float notNearPlayerTime = 0f;
@@ -14,7 +16,7 @@ public class TheOthersHandler : MonoBehaviour {
 
 	void OnMouseDown() {
 		if (isNearPlayer) {
-			Debug.Log("clicked while near player");
+			player.SendMessage("setHealth",50,SendMessageOptions.DontRequireReceiver);
 		}
 
 	}
@@ -33,7 +35,8 @@ public class TheOthersHandler : MonoBehaviour {
 	}
 	
 	void Awake() {
-		halo = this.GetComponent ("Halo") as Behaviour;
+		halo = GetComponent ("Halo") as Behaviour;
+		player = GameObject.FindWithTag ("Player");
 	}
 
 	// received as message from other objects
