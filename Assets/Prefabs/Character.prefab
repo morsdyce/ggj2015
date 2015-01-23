@@ -12,6 +12,8 @@ GameObject:
   - 65: {fileID: 6536118}
   - 23: {fileID: 2336118}
   - 114: {fileID: 11436118}
+  - 114: {fileID: 11469558}
+  - 135: {fileID: 13531784}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -78,11 +80,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 136118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da1ab302f9b7c498b80fa038e873014d, type: 3}
+  m_Script: {fileID: 11500000, guid: f82e7ba9b899f4541aa28cca7ee31820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goTerrain: {fileID: 0}
   speed: 5
+--- !u!114 &11469558
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf58c967092f41c097b3cb86f269092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &13531784
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.00692582
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
