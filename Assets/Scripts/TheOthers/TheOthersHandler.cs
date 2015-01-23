@@ -10,6 +10,10 @@ public class TheOthersHandler : MonoBehaviour {
 	void Start () {
 	
 	}
+
+	void OnMouseDown() {
+		Debug.Log("clicked on me!");
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -18,7 +22,7 @@ public class TheOthersHandler : MonoBehaviour {
 			turnOffHaloTime = 0f;
 		}
 	}
-
+	
 	void Awake() {
 		halo = this.GetComponent ("Halo") as Behaviour;
 	}
