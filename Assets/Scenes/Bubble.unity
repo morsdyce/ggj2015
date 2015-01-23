@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d442f9e9f5743448ea3b89660078a5ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1200474351}
+  target: {fileID: 1147476985}
   smoothing: 5
 --- !u!1 &925385326
 GameObject:
@@ -1282,7 +1282,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147476978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .839999974, y: .860000014, z: -3.6099999}
+  m_LocalPosition: {x: -2.02999997, y: 1.88100004, z: -8.31000042}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1849,7 +1849,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1485683580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01999998, y: 0, z: -8.63000011}
+  m_LocalPosition: {x: 1.01999998, y: .439999998, z: -8.63000011}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2032,7 +2032,7 @@ Prefab:
     - target: {fileID: 11471716, guid: ee64057cce58e4677b6866da108cb813, type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1200474351}
+      objectReference: {fileID: 1147476985}
     - target: {fileID: 2071716, guid: ee64057cce58e4677b6866da108cb813, type: 2}
       propertyPath: orthographic size
       value: 3.18000007

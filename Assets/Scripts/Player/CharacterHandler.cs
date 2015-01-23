@@ -29,6 +29,7 @@ public class CharacterHandler : MonoBehaviour {
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (goTerrain.collider.Raycast(ray, out hit, Mathf.Infinity)){
 				targetLocation = hit.point;
+				targetLocation.y = 0.54f;
 			}
 		}
 

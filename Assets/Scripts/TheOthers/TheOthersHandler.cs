@@ -5,6 +5,7 @@ public class TheOthersHandler : MonoBehaviour {
 
 	private Behaviour halo;
 	private float turnOffHaloTime = 0f;
+	private DialogBubble dialog;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,8 @@ public class TheOthersHandler : MonoBehaviour {
 	}
 
 	void OnMouseDown() {
-		Debug.Log("clicked on me!");
+		Debug.Log ("Click fired");
+		dialog.showDialogMessage ();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +27,7 @@ public class TheOthersHandler : MonoBehaviour {
 	
 	void Awake() {
 		halo = this.GetComponent ("Halo") as Behaviour;
+		dialog = GetComponent<DialogBubble> ();
 	}
 
 	// received as message from other objects
