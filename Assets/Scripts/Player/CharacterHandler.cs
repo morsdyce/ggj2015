@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterHandler : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class CharacterHandler : MonoBehaviour {
 	// last click target location
 	private Vector3 targetLocation = new Vector3(-100,-100,-1);
 
-//	private UnityEngine.UI.Slider lifeBarSlider;
+	private Slider lifeBarSlider;
 
 	private float health = 100f;
 
@@ -19,7 +20,7 @@ public class CharacterHandler : MonoBehaviour {
 	}
 
 	void Awake(){
-//		lifeBarSlider = GetComponent ("Slider") as UnityEngine.UI.Slider;
+		lifeBarSlider = GameObject.FindWithTag("HealthBar").GetComponent("Slider") as Slider;
 	}
 
 	void Update () {
@@ -38,5 +39,10 @@ public class CharacterHandler : MonoBehaviour {
 			transform.position = Vector3.MoveTowards(transform.position, targetLocation, step);
 		}
 
+	}
+
+	void setHealth(float newValue){
+		health = newValue;
+		lifeBarSlider.value = health;
 	}
 }
