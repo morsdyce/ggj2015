@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class CharacterHandler : MonoBehaviour {
 
 	public GameObject goTerrain;
-
-	private float dist;
+	
 	public float speed = 5f;
 	// last click target location
 	private Vector3 targetLocation = new Vector3(-100,-100,-1);
@@ -15,9 +14,7 @@ public class CharacterHandler : MonoBehaviour {
 
 	private float health = 100f;
 
-	void Start () {
-		dist = transform.position.y; // Distance camera is above map
-	}
+	void Start () {}
 
 	void Awake(){
 		lifeBarSlider = GameObject.FindWithTag("HealthBar").GetComponent("Slider") as Slider;

@@ -6,7 +6,6 @@ public class TheOthersHandler : MonoBehaviour {
 	private GameObject player;
 
 	private Behaviour halo;
-	private float turnOffHaloTime = 0f;
 	private DialogBubble dialog;
 	private bool isNearPlayer = false;
 	private float notNearPlayerTime = 0f;
