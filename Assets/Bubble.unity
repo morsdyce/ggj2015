@@ -117,11 +117,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Speech Bubble bla bla bla bla lorem ipsum dolor Speech Bubble bla bla bla
-    bla lorem ipsum dolor Speech Bubble bla bla bla bla lorem ipsum dolor Speech Bubble
-    bla bla bla bla lorem ipsum dolorSpeech Bubble bla bla bla bla lorem ipsum dolor
-    Speech Bubble bla bla bla bla lorem ipsum dolor Speech Bubble bla bla bla bla
-    lorem ipsum dolor Speech Bubble bla bla bla bla lorem ipsum dolor
+  m_Text: Placeholder dialog text
 --- !u!222 &738114114
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -212,7 +208,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.65999997
+  orthographic size: 2.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -316,7 +312,7 @@ Transform:
   m_GameObject: {fileID: 925385326}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -801,6 +797,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11430618, guid: 8296c6eb8410642e994d7399a8b5ec1e, type: 2}
+      propertyPath: m_Text
+      value: Placeholder dialog text
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8296c6eb8410642e994d7399a8b5ec1e, type: 2}
   m_RootGameObject: {fileID: 1002434953}
@@ -934,6 +934,10 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1200474351}
+    - target: {fileID: 2071716, guid: ee64057cce58e4677b6866da108cb813, type: 2}
+      propertyPath: orthographic size
+      value: 2.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ee64057cce58e4677b6866da108cb813, type: 2}
   m_RootGameObject: {fileID: 848751711}
