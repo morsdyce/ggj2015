@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy/EnemyAttack.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Enemy/EnemyMovement.cs" Line="10" Column="12" />
+      <File FileName="Assets/Scripts/Camera/CameraFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC/DialogBubble.cs" Line="1" Column="1" />
+      <File FileName="Assets/Dialogs/joe.txt" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC/CatAnimation.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/TheOthers/TheOthersHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/CharacterHandler.cs" Line="1" Column="1" />
+      <File FileName="../Unity/test_level/Assets/Scripts/Player/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerMovement.cs" Line="83" Column="5" />
+      <File FileName="Assets/Scripts/Enemy/EnemyAttack.cs" Line="30" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: fe416e07006254691a8d872c33e53a98
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group1
+    100004: head
+    100006: head_tip
+    100008: joint13
+    100010: Left__Front_foot_tip
+    100012: Left__Front_foot_tip1
+    100014: Left__Front_top_leg
+    100016: Left__Front_top_leg1
+    100018: Left_Back_Foot
+    100020: Left_Back_Foot1
+    100022: Left_Back_Foot_tip
+    100024: Left_Back_Foot_tip1
+    100026: Left_Back_Leg
+    100028: Left_Back_Leg1
+    100030: Left_Back_Top_Leg
+    100032: Left_Back_Top_Leg1
+    100034: Left_Ear
+    100036: Left_Ear1
+    100038: Left_Ear_tip
+    100040: Left_Ear_tip1
+    100042: Left_Front_Foot
+    100044: Left_Front_Foot1
+    100046: Left_Front_Leg
+    100048: Left_Front_Leg1
+    100050: Neck
+    100052: nurbsCircle1
+    100054: nurbsCircle2
+    100056: nurbsCircle3
+    100058: polySurface1
+    100060: root
+    100062: Spin01
+    100064: spin_02
+    100066: tail1
+    100068: tail2
+    100070: tail3
+    100072: tail_tip
+    400000: //RootNode
+    400002: group1
+    400004: head
+    400006: head_tip
+    400008: joint13
+    400010: Left__Front_foot_tip
+    400012: Left__Front_foot_tip1
+    400014: Left__Front_top_leg
+    400016: Left__Front_top_leg1
+    400018: Left_Back_Foot
+    400020: Left_Back_Foot1
+    400022: Left_Back_Foot_tip
+    400024: Left_Back_Foot_tip1
+    400026: Left_Back_Leg
+    400028: Left_Back_Leg1
+    400030: Left_Back_Top_Leg
+    400032: Left_Back_Top_Leg1
+    400034: Left_Ear
+    400036: Left_Ear1
+    400038: Left_Ear_tip
+    400040: Left_Ear_tip1
+    400042: Left_Front_Foot
+    400044: Left_Front_Foot1
+    400046: Left_Front_Leg
+    400048: Left_Front_Leg1
+    400050: Neck
+    400052: nurbsCircle1
+    400054: nurbsCircle2
+    400056: nurbsCircle3
+    400058: polySurface1
+    400060: root
+    400062: Spin01
+    400064: spin_02
+    400066: tail1
+    400068: tail2
+    400070: tail3
+    400072: tail_tip
+    4300000: polySurface1
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: polySurface1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
