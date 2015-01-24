@@ -4,69 +4,52 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour
 {
-	public float timeBetweenAttacks = 0.5f;     
-	public int attackDamage = 10;               
+	public float timeBetweenAttacks = 0.5f;
+	public int attackDamage = 10;     
 
-	Animator anim;                              
-	GameObject player;                          
-//	PlayerHealth playerHealth;                  
-//	EnemyHealth enemyHealth;                    
-	bool playerInRange;  
-	float timer;       
+	Animator anim;
+	GameObject player;
+	bool playerInRange;
+	float timer;
 	EnemyMovement enemyMovement;
 	
-	
-	void Awake ()
-	{
-		// Setting up the references.
+	void Awake (){
 		enemyMovement = GetComponent<EnemyMovement> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
-//		playerHealth = player.GetComponent <PlayerHealth> ();
-//		enemyHealth = GetComponent<EnemyHealth>();
 		anim = GetComponent <Animator> ();
 	}
 	
 	
-	void OnTriggerEnter (Collider other)
-	{
-
-		if(other.gameObject == player)
-		{
+	void OnTriggerEnter (Collider other){
+		if(other.gameObject == player){
 			playerInRange = true;
 		}
 	}
 	
 	
-	void OnTriggerExit (Collider other)
-	{
-		if(other.gameObject == player)
-		{
+	void OnTriggerExit (Collider other){
+		if(other.gameObject == player){
 			playerInRange = false;
 		}
 	}
 	
 	
-	void Update ()
-	{
-		timer += Time.deltaTime;
+	void Update (){
+		timer += Time.deltaTime; 
 
 		if (timer >= timeBetweenAttacks && playerInRange && enemyMovement.enabled /*&& enemyHealth.currentHealth > 0*/) {
 						Attack ();
 		} else {
 				anim.SetBool("Attacking", false);
-		}
-		
+		}	
+	}
 
-//		if(playerHealth.currentHealth <= 0)
-//		{
-//			// ... tell the animator the player is dead.
-//			anim.SetTrigger ("PlayerDead");
-//		}
+	void PlayerAttack(){
+		Debug.Log ("player attacking");
 	}
 	
 	
-	public void Attack ()
-	{
+	public void Attack (){
 		timer = 0f;
 		Debug.Log ("Attack");
 		anim.SetBool ("Attacking", true);
@@ -78,13 +61,6 @@ public class EnemyAttack : MonoBehaviour
 			gameObject.tag = "Enemy";
 			gameObject.layer = 0;
 			anim.SetBool("IsActive", true);
-		}
-		
-//		// If the player has health to lose...
-//		if(playerHealth.currentHealth > 0)
-//		{
-//			// ... damage the player.
-//			playerHealth.TakeDamage (attackDamage);
-//		}
+		}	
 	}
 }
