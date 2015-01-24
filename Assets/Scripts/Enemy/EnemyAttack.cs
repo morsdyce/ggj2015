@@ -35,7 +35,7 @@ public class EnemyAttack : MonoBehaviour
 	
 	
 	void Update (){
-		timer += Time.deltaTime;
+		timer += Time.deltaTime; 
 
 		if (timer >= timeBetweenAttacks && playerInRange && enemyMovement.enabled /*&& enemyHealth.currentHealth > 0*/) {
 						Attack ();
