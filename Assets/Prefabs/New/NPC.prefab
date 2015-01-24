@@ -73,6 +73,7 @@ MonoBehaviour:
   dialogFileName: joe
   dialogWindow: {fileID: 0}
   dialogTextBox: {fileID: 0}
+  AttackOnFinish: 0
 --- !u!135 &13563916
 SphereCollider:
   m_ObjectHideFlags: 1
