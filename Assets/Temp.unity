@@ -822,6 +822,8 @@ MonoBehaviour:
   dialogWindow: {fileID: 430286262}
   dialogTextBox: {fileID: 1887283574}
   AttackOnFinish: 0
+  playerMovement: {fileID: 0}
+  isSeenOnce: 0
 --- !u!23 &731320663
 Renderer:
   m_ObjectHideFlags: 0
@@ -2273,6 +2275,8 @@ MonoBehaviour:
   dialogWindow: {fileID: 430286262}
   dialogTextBox: {fileID: 1887283574}
   AttackOnFinish: 1
+  playerMovement: {fileID: 0}
+  isSeenOnce: 0
 --- !u!135 &1494027835
 SphereCollider:
   m_ObjectHideFlags: 0

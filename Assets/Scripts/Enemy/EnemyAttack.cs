@@ -10,37 +10,49 @@ public class EnemyAttack : MonoBehaviour
 	Animator anim;
 	GameObject player;
 	bool playerInRange;
-	float timer;
+	private float lastAttackTime = 0;
 	EnemyMovement enemyMovement;
+	DialogBubble dialogBubble;
 	
 	void Awake (){
 		enemyMovement = GetComponent<EnemyMovement> ();
+		dialogBubble = GetComponent<DialogBubble> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
 		anim = GetComponent <Animator> ();
 	}
-	
 	
 	void OnTriggerEnter (Collider other){
 		if(other.gameObject == player){
 			playerInRange = true;
 		}
 	}
-	
-	
+
 	void OnTriggerExit (Collider other){
 		if(other.gameObject == player){
 			playerInRange = false;
 		}
 	}
 	
-	
 	void Update (){
-		timer += Time.deltaTime; 
 
-		if (timer >= timeBetweenAttacks && playerInRange && enemyMovement.enabled /*&& enemyHealth.currentHealth > 0*/) {
-						Attack ();
+		if(dialogBubble.isSeenOnce && !enemyMovement.enabled){
+			// if enemy movemnt has not been enabled the entity is still in npc dialog state
+			// once enemy movement has been enabled mark the enemy as an enemy and remove the NPC layer
+			enemyMovement.enabled = true;
+			gameObject.tag = "Enemy";
+			gameObject.layer = 0;
+			anim.SetBool("IsActive", true);
+			// don't start the attack right away
+			lastAttackTime = Time.time;
+		}
+
+		if (playerInRange && lastAttackTime != 0 && lastAttackTime + timeBetweenAttacks < Time.time && enemyMovement.enabled) {
+			Debug.Log("attaced!");
+			lastAttackTime = Time.time;
+			anim.SetBool ("Attacking", true);
+			Attack ();
 		} else {
-				anim.SetBool("Attacking", false);
+			anim.SetBool("Attacking", false);
 		}	
 	}
 
@@ -49,18 +61,7 @@ public class EnemyAttack : MonoBehaviour
 	}
 	
 	
-	public void Attack (){
-		timer = 0f;
-		Debug.Log ("Attack");
-		anim.SetBool ("Attacking", true);
-
-		// if enemy movemnt has not been enabled the entity is still in npc dialog state
-		// once enemy movement has been enabled mark the enemy as an enemy and remove the NPC layer
-		if (!enemyMovement.enabled) {
-			enemyMovement.enabled = true;
-			gameObject.tag = "Enemy";
-			gameObject.layer = 0;
-			anim.SetBool("IsActive", true);
-		}	
+	void Attack (){
+		player.SendMessage ("EnemyAttack");
 	}
 }

@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
 	private Slider lifeBarSlider;
 	private GameObject enemyInRange;
 
-	private float lastAttackTime;
+	private float lastAttackTime = 0;
 	public float timeBetweenAttacks = 0.5f;
 	public int attackDamage = 10;
 	private int health = 100;
@@ -39,15 +39,16 @@ public class PlayerAttack : MonoBehaviour
 	
 	void Update ()
 	{
-		if(enemyInRange != null && Time.time + timeBetweenAttacks >= lastAttackTime && Input.GetButtonDown("Fire1")){
+		if(enemyInRange != null && lastAttackTime != 0 && lastAttackTime + timeBetweenAttacks < Time.time  && Input.GetButtonDown("Fire1")){
 			lastAttackTime = Time.time;
 			Attack ();
 		}
 	}
 
-	void EnemyAttack(){
+	public void EnemyAttack(){
 		Debug.Log ("enemy attacking");
-		setHealth (20);
+		health = health -= attackDamage;
+		setHealth (health);
 	}
 	
 	
