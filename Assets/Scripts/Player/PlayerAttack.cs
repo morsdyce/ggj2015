@@ -1,26 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
-	public float timeBetweenAttacks = 0.5f;     
-	public int attackDamage = 10;               
-	
-	
-	//	Animator anim;                              
-	//	PlayerHealth playerHealth;                  // Reference to the player's health.
-	//	EnemyHealth enemyHealth;                    // Reference to this enemy's health.
-	bool enemyInRange;                         
-	float timer;                                
-	
-	
+
+	private Slider lifeBarSlider;
+	private GameObject enemyInRange;
+
+	private float lastAttackTime;
+	public float timeBetweenAttacks = 0.5f;
+	public int attackDamage = 10;
+	private int health = 100;
+
 	void Awake ()
 	{
-		// Setting up the references.
-		//		playerHealth = player.GetComponent <PlayerHealth> ();
-		//		enemyHealth = GetComponent<EnemyHealth>();
-		//		anim = GetComponent <Animator> ();
+		lifeBarSlider = GameObject.FindWithTag("HealthBar").GetComponent("Slider") as Slider;
 	}
 	
 	
@@ -28,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
-			enemyInRange = true;
+			enemyInRange = other.gameObject;
 		}
 	}
 	
@@ -37,39 +32,35 @@ public class PlayerAttack : MonoBehaviour
 	{
 		if(other.gameObject.tag == "Enemy")
 		{
-			enemyInRange = false;
+			enemyInRange = null;
 		}
 	}
 	
 	
 	void Update ()
 	{
-		timer += Time.deltaTime;
-
-		if(timer >= timeBetweenAttacks && enemyInRange && Input.GetButtonDown("Fire1") /*&& enemyHealth.currentHealth > 0*/)
-		{
+		if(enemyInRange != null && Time.time + timeBetweenAttacks >= lastAttackTime && Input.GetButtonDown("Fire1")){
+			lastAttackTime = Time.time;
 			Attack ();
 		}
-		
-		// If the player has zero or less health...
-		//		if(playerHealth.currentHealth <= 0)
-		//		{
-		//			// ... tell the animator the player is dead.
-		//			anim.SetTrigger ("PlayerDead");
-		//		}
+	}
+
+	void EnemyAttack(){
+		Debug.Log ("enemy attacking");
+		setHealth (20);
 	}
 	
 	
 	void Attack ()
 	{
-		timer = 0f;
-		Debug.Log ("Player Attack");
-		
-		//		// If the player has health to lose...
-		//		if(playerHealth.currentHealth > 0)
-		//		{
-		//			// ... damage the player.
-		//			playerHealth.TakeDamage (attackDamage);
-		//		}
+		if (enemyInRange != null) {
+			enemyInRange.SendMessage("PlayerAttack");
+		}
 	}
+
+	void setHealth(int newValue){
+		health = newValue;
+		lifeBarSlider.value = health;
+	}
+
 }
