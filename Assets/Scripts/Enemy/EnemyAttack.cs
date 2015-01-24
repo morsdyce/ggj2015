@@ -6,23 +6,24 @@ public class EnemyAttack : MonoBehaviour
 {
 	public float timeBetweenAttacks = 0.5f;     
 	public int attackDamage = 10;               
-	
-	
-//	Animator anim;                              
+
+	Animator anim;                              
 	GameObject player;                          
 //	PlayerHealth playerHealth;                  
 //	EnemyHealth enemyHealth;                    
-	bool playerInRange;                         
-	float timer;                                
+	bool playerInRange;  
+	float timer;       
+	EnemyMovement enemyMovement;
 	
 	
 	void Awake ()
 	{
 		// Setting up the references.
+		enemyMovement = GetComponent<EnemyMovement> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
 //		playerHealth = player.GetComponent <PlayerHealth> ();
 //		enemyHealth = GetComponent<EnemyHealth>();
-//		anim = GetComponent <Animator> ();
+		anim = GetComponent <Animator> ();
 	}
 	
 	
@@ -49,9 +50,10 @@ public class EnemyAttack : MonoBehaviour
 	{
 		timer += Time.deltaTime;
 
-		if(timer >= timeBetweenAttacks && playerInRange /*&& enemyHealth.currentHealth > 0*/)
-		{
-			Attack ();
+		if (timer >= timeBetweenAttacks && playerInRange && enemyMovement.enabled /*&& enemyHealth.currentHealth > 0*/) {
+						Attack ();
+		} else {
+				anim.SetBool("Attacking", false);
 		}
 		
 
@@ -63,10 +65,20 @@ public class EnemyAttack : MonoBehaviour
 	}
 	
 	
-	void Attack ()
+	public void Attack ()
 	{
 		timer = 0f;
-//		Debug.Log ("Attack");
+		Debug.Log ("Attack");
+		anim.SetBool ("Attacking", true);
+
+		// if enemy movemnt has not been enabled the entity is still in npc dialog state
+		// once enemy movement has been enabled mark the enemy as an enemy and remove the NPC layer
+		if (!enemyMovement.enabled) {
+			enemyMovement.enabled = true;
+			gameObject.tag = "Enemy";
+			gameObject.layer = 0;
+			anim.SetBool("IsActive", true);
+		}
 		
 //		// If the player has health to lose...
 //		if(playerHealth.currentHealth > 0)

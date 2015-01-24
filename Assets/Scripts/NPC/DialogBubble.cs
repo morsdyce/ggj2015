@@ -9,6 +9,7 @@ public class DialogBubble : MonoBehaviour {
 	public string dialogFileName;
 	public GameObject dialogWindow;
 	public Text dialogTextBox;
+	public bool AttackOnFinish = false;
 
 	DirectoryInfo dialogDirectory;
 	string[] dialogLines;
@@ -17,6 +18,7 @@ public class DialogBubble : MonoBehaviour {
 	bool playerInRange = false;
 	GameObject player;
 	PlayerMovement playerMovement;
+	EnemyAttack enemyAttack;
 
 	int currentLine;
 
@@ -25,6 +27,7 @@ public class DialogBubble : MonoBehaviour {
 		npcMask = LayerMask.GetMask ("NPC");
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerMovement = player.GetComponent<PlayerMovement> ();
+		enemyAttack = GetComponent<EnemyAttack> ();
 
 		// get reference to dialog directory
 		dialogDirectory = new DirectoryInfo(Application.dataPath + "/Dialogs");
@@ -88,6 +91,10 @@ public class DialogBubble : MonoBehaviour {
 		dialogWindow.SetActive (false);
 		dialogOpen = false;
 		playerMovement.enabled = true;
+
+		if (AttackOnFinish && enemyAttack != null) {
+			enemyAttack.Attack();
+		}
 	}
 
 	void OnTriggerEnter(Collider other) {
