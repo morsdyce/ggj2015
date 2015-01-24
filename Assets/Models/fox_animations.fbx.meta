@@ -1,0 +1,510 @@
+fileFormatVersion: 2
+guid: 65b169727a0bf451eb51c2c79b36b352
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: char_fox
+    100002: //RootNode
+    100004: head
+    100006: joint12
+    100008: joint6
+    100010: joint7
+    100012: L_arm
+    100014: L_foot
+    100016: L_foot_tip
+    100018: L_hand
+    100020: L_leg
+    100022: L_sholder
+    100024: L_tip
+    100026: L_up_leg
+    100028: neck
+    100030: nurbsCircle10
+    100032: nurbsCircle11
+    100034: nurbsCircle12
+    100036: nurbsCircle13
+    100038: nurbsCircle4
+    100040: nurbsCircle5
+    100042: nurbsCircle6
+    100044: nurbsCircle7
+    100046: nurbsCircle8
+    100048: nurbsCircle9
+    100050: R_arm
+    100052: R_foot
+    100054: R_foot_tip
+    100056: R_hand
+    100058: R_leg
+    100060: R_sholder
+    100062: R_tip
+    100064: R_up_leg
+    100066: Root
+    400000: char_fox
+    400002: //RootNode
+    400004: head
+    400006: joint12
+    400008: joint6
+    400010: joint7
+    400012: L_arm
+    400014: L_foot
+    400016: L_foot_tip
+    400018: L_hand
+    400020: L_leg
+    400022: L_sholder
+    400024: L_tip
+    400026: L_up_leg
+    400028: neck
+    400030: nurbsCircle10
+    400032: nurbsCircle11
+    400034: nurbsCircle12
+    400036: nurbsCircle13
+    400038: nurbsCircle4
+    400040: nurbsCircle5
+    400042: nurbsCircle6
+    400044: nurbsCircle7
+    400046: nurbsCircle8
+    400048: nurbsCircle9
+    400050: R_arm
+    400052: R_foot
+    400054: R_foot_tip
+    400056: R_hand
+    400058: R_leg
+    400060: R_sholder
+    400062: R_tip
+    400064: R_up_leg
+    400066: Root
+    4300000: char_fox
+    7400000: Walk
+    7400002: Idle
+    7400004: Attack
+    7400006: Death
+    9500000: //RootNode
+    13700000: char_fox
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 32
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: char_fox
+        weight: 1
+      - path: nurbsCircle10
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5/nurbsCircle4
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8/nurbsCircle9
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle13
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/joint6
+        weight: 1
+      - path: Root/joint6/joint7
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip/joint12
+        weight: 1
+      - path: Root/joint6/joint7/neck
+        weight: 1
+      - path: Root/joint6/joint7/neck/head
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand/R_tip
+        weight: 1
+      - path: Root/L_up_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot/L_foot_tip
+        weight: 1
+      - path: Root/R_up_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot/R_foot_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 33
+      lastFrame: 43
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: char_fox
+        weight: 1
+      - path: nurbsCircle10
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5/nurbsCircle4
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8/nurbsCircle9
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle13
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/joint6
+        weight: 1
+      - path: Root/joint6/joint7
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip/joint12
+        weight: 1
+      - path: Root/joint6/joint7/neck
+        weight: 1
+      - path: Root/joint6/joint7/neck/head
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand/R_tip
+        weight: 1
+      - path: Root/L_up_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot/L_foot_tip
+        weight: 1
+      - path: Root/R_up_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot/R_foot_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: Take 001
+      firstFrame: 44
+      lastFrame: 52
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: char_fox
+        weight: 1
+      - path: nurbsCircle10
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5/nurbsCircle4
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8/nurbsCircle9
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle13
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/joint6
+        weight: 1
+      - path: Root/joint6/joint7
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip/joint12
+        weight: 1
+      - path: Root/joint6/joint7/neck
+        weight: 1
+      - path: Root/joint6/joint7/neck/head
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand/R_tip
+        weight: 1
+      - path: Root/L_up_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot/L_foot_tip
+        weight: 1
+      - path: Root/R_up_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot/R_foot_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death
+      takeName: Take 001
+      firstFrame: 53
+      lastFrame: 68
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: char_fox
+        weight: 1
+      - path: nurbsCircle10
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle6/nurbsCircle5/nurbsCircle4
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle7/nurbsCircle8/nurbsCircle9
+        weight: 1
+      - path: nurbsCircle10/nurbsCircle11/nurbsCircle12/nurbsCircle13
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/joint6
+        weight: 1
+      - path: Root/joint6/joint7
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip
+        weight: 1
+      - path: Root/joint6/joint7/L_sholder/L_arm/L_hand/L_tip/joint12
+        weight: 1
+      - path: Root/joint6/joint7/neck
+        weight: 1
+      - path: Root/joint6/joint7/neck/head
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand
+        weight: 1
+      - path: Root/joint6/joint7/R_sholder/R_arm/R_hand/R_tip
+        weight: 1
+      - path: Root/L_up_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot
+        weight: 1
+      - path: Root/L_up_leg/L_leg/L_foot/L_foot_tip
+        weight: 1
+      - path: Root/R_up_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot
+        weight: 1
+      - path: Root/R_up_leg/R_leg/R_foot/R_foot_tip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

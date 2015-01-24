@@ -19,6 +19,10 @@ public class PlayerMovement : MonoBehaviour
 		anim = GetComponent <Animator> ();
 		playerRigidbody = GetComponent <Rigidbody> ();
 	}
+
+	void Start() {
+		//anim.speed = 1.5f;
+	}
 	
 	
 	void FixedUpdate ()
@@ -39,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
 	
 	void Move (float h, float v)
 	{
-
 		movement.Set (h, 0f, v);
 		movement = movement.normalized * speed * Time.deltaTime;
 		playerRigidbody.MovePosition (transform.position + movement);
@@ -70,6 +73,6 @@ public class PlayerMovement : MonoBehaviour
 		// Create a boolean that is true if either of the input axes is non-zero.
 		bool walking = h != 0f || v != 0f;
 
-//		anim.SetBool ("IsWalking", walking);
+		anim.SetBool ("IsWalking", walking);
 	}
 }
