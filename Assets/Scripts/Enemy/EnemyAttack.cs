@@ -5,12 +5,14 @@ using System.Collections;
 public class EnemyAttack : MonoBehaviour
 {
 	public float timeBetweenAttacks = 0.5f;
-	public int attackDamage = 10;     
+	public int attackDamage = 10;    
+	int health = 20;
+	private float lastAttackTime = 0;
 
 	Animator anim;
 	GameObject player;
 	bool playerInRange;
-	private float lastAttackTime = 0;
+
 	EnemyMovement enemyMovement;
 	DialogBubble dialogBubble;
 	
@@ -32,14 +34,12 @@ public class EnemyAttack : MonoBehaviour
 			playerInRange = false;
 		}
 	}
-	
-	void Update (){
 
-		if(dialogBubble.isSeenOnce && !enemyMovement.enabled){
+	void Update (){
+		if(dialogBubble.isSeenOnce && !enemyMovement.enabled && health > 0){
 			// if enemy movemnt has not been enabled the entity is still in npc dialog state
 			// once enemy movement has been enabled mark the enemy as an enemy and remove the NPC layer
 			enemyMovement.enabled = true;
-			gameObject.tag = "Enemy";
 			gameObject.layer = 0;
 			anim.SetBool("IsActive", true);
 			// don't start the attack right away
@@ -47,7 +47,6 @@ public class EnemyAttack : MonoBehaviour
 		}
 
 		if (playerInRange && lastAttackTime != 0 && lastAttackTime + timeBetweenAttacks < Time.time && enemyMovement.enabled) {
-			Debug.Log("attaced!");
 			lastAttackTime = Time.time;
 			anim.SetBool ("Attacking", true);
 			Attack ();
@@ -57,7 +56,11 @@ public class EnemyAttack : MonoBehaviour
 	}
 
 	void PlayerAttack(){
-		Debug.Log ("player attacking");
+		health = health -= attackDamage;
+		if (health == 0) {
+			enemyMovement.enabled = false;
+			anim.SetTrigger("Die");
+		}
 	}
 	
 	

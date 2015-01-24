@@ -48,7 +48,7 @@ public class DialogBubble : MonoBehaviour {
 			RaycastHit npcHit;
 			
 			// Perform the raycast and if it hits something on the floor layer...
-			if(!dialogOpen && Physics.Raycast (camRay, out npcHit, 100f, npcMask) && playerInRange)
+			if(!dialogOpen && !isSeenOnce && Physics.Raycast (camRay, out npcHit, 100f, npcMask) && playerInRange)
 			{
 				if (npcHit.collider.gameObject == gameObject) {
 					showDialogMessage();

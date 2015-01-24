@@ -39,14 +39,13 @@ public class PlayerAttack : MonoBehaviour
 	
 	void Update ()
 	{
-		if(enemyInRange != null && lastAttackTime != 0 && lastAttackTime + timeBetweenAttacks < Time.time  && Input.GetButtonDown("Fire1")){
+		if(enemyInRange != null && lastAttackTime + timeBetweenAttacks < Time.time  && Input.GetButtonDown("Fire1")){
 			lastAttackTime = Time.time;
 			Attack ();
 		}
 	}
 
 	public void EnemyAttack(){
-		Debug.Log ("enemy attacking");
 		health = health -= attackDamage;
 		setHealth (health);
 	}
