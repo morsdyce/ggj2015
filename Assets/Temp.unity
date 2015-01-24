@@ -821,7 +821,6 @@ MonoBehaviour:
   dialogFileName: joe
   dialogWindow: {fileID: 430286262}
   dialogTextBox: {fileID: 1887283574}
-  AttackOnFinish: 0
   playerMovement: {fileID: 0}
   isSeenOnce: 0
 --- !u!23 &731320663
@@ -2274,7 +2273,6 @@ MonoBehaviour:
   dialogFileName: joe
   dialogWindow: {fileID: 430286262}
   dialogTextBox: {fileID: 1887283574}
-  AttackOnFinish: 1
   playerMovement: {fileID: 0}
   isSeenOnce: 0
 --- !u!135 &1494027835
@@ -2288,7 +2286,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .620000005
+  m_Radius: .300000012
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &1494027836
 NavMeshAgent:
@@ -2720,6 +2718,10 @@ Prefab:
       propertyPath: dialogTextBox
       value: 
       objectReference: {fileID: 1887283574}
+    - target: {fileID: 13553436, guid: f65330940fb804ca9ba4c488d02653c7, type: 2}
+      propertyPath: m_Radius
+      value: .300000012
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f65330940fb804ca9ba4c488d02653c7, type: 2}
   m_RootGameObject: {fileID: 1494027832}
