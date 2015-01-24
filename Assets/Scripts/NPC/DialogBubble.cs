@@ -12,10 +12,19 @@ public class DialogBubble : MonoBehaviour {
 
 	DirectoryInfo dialogDirectory;
 	string[] dialogLines;
+	LayerMask npcMask;
+	bool dialogOpen = false;
+	bool playerInRange = false;
+	GameObject player;
+	PlayerMovement playerMovement;
 
 	int currentLine;
 
 	void Awake () {
+
+		npcMask = LayerMask.GetMask ("NPC");
+		player = GameObject.FindGameObjectWithTag ("Player");
+		playerMovement = player.GetComponent<PlayerMovement> ();
 
 		// get reference to dialog directory
 		dialogDirectory = new DirectoryInfo(Application.dataPath + "/Dialogs");
@@ -30,9 +39,25 @@ public class DialogBubble : MonoBehaviour {
 	
 
 	void Update () {
-		if (Input.GetButtonDown ("Fire1") && dialogWindow.activeSelf) {
-			showDialogMessage();
+		if (Input.GetButtonDown ("Fire1")) {
+			// Create a ray from the mouse cursor on screen in the direction of the camera.
+			Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+			
+			// Create a RaycastHit variable to store information about what was hit by the ray.
+			RaycastHit npcHit;
+			
+			// Perform the raycast and if it hits something on the floor layer...
+			if(!dialogOpen && Physics.Raycast (camRay, out npcHit, 100f, npcMask) && playerInRange)
+			{
+				if (npcHit.collider.gameObject == gameObject) {
+					showDialogMessage();
+				}
+				
+			} else if (dialogOpen) {
+				showDialogMessage();
+			}
 		}
+
 	}
 
 	/**
@@ -55,9 +80,25 @@ public class DialogBubble : MonoBehaviour {
 
 	void ShowDialog() {
 		dialogWindow.SetActive (true);
+		dialogOpen = true;
+		playerMovement.enabled = false;
 	}
 
 	void HideDialog() {
 		dialogWindow.SetActive (false);
+		dialogOpen = false;
+		playerMovement.enabled = true;
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject == player) {
+			playerInRange = true;
+		}
+	}
+
+	void OnTriggerExit(Collider other) {
+		if (other.gameObject == player) {
+			playerInRange = false;
+		}
 	}
 }
