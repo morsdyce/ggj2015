@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\NPC\CatAnimation.cs" />
      <Compile Include="Assets\Scripts\NPC\DialogBubble.cs" />
+     <Compile Include="Assets\Scripts\NPC\GlowTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\CharacterHandler.cs" />
      <Compile Include="Assets\Scripts\Player\NearFieldTrigger.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
